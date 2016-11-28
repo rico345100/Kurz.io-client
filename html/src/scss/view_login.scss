@@ -1,0 +1,41 @@
+#viewLogin {
+	background-color: $app-bg-color;
+
+	> form {
+		position: absolute;
+		width: 400px;
+		height: 400px;
+		top: 50%;
+		left: 50%;
+		margin-top: -200px;
+		margin-left: -200px;
+
+		> img {
+			display: block;
+			width: 200px;
+			height: 200px;
+			margin: 0 auto; 
+		}
+		> .ui-textbox {
+			display: block;
+			width: 100%;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 12px 20px;
+		}
+		> div {
+			overflow: hidden;
+			 
+			> input {
+				width: 48%;
+				font-size: 16px;
+			}
+			> .left {
+				float: left;
+			}
+			> .right {
+				float: right;
+			}
+		}
+	}
+}

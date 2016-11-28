@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'express';
+	src: url("../font/express.woff") format("woff"), url("../font/express.ttf") format("truetype");
+}
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'express';
+	cursor: default;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%; 
+}
+
+body {
+	background-color: $app-bg-color;
+	user-select: none;
+    -webkit-user-select: none;
+}
+
+a {
+	text-decoration: none; 
+}
+
+*:focus {
+	outline: none; 
+}

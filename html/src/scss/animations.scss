@@ -1,0 +1,19 @@
+.anim-app-config-enter {
+	transform: translateX(100%);
+
+	&.anim-app-config-enter-active {
+		transform: translateX(0);
+		transition-duration: .3s;
+		transition-timing-function: ease-in-out;
+	}
+}
+
+.anim-app-config-leave {
+	transform: translateX(0);
+
+	&.anim-app-config-leave-active {
+		transform: translateX(100%);
+		transition-duration: .3s;
+		transition-timing-function: ease-in-out;
+	}
+}

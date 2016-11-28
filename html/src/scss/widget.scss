@@ -1,0 +1,56 @@
+#kurz-io-widget {
+	> div {
+		> .app-widget-bg {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.3);
+			z-index: 300;
+			
+			> div {
+				background-color: #fff;
+				border: 1px solid #000;
+				position: absolute;
+				top: 32px;
+				left: 50%;
+				width: 400px;
+				margin-left: -200px;
+				min-height: 100px;
+				padding: 16px;
+				transition-duration: .3s;
+				-webkit-transition-duration: .3s;
+				transform: translateY(-150%);
+				-webkit-transform: translateY(-150%);
+				word-break: break-word;
+				
+				&.show {
+					transform: none;
+					-webkit-transform: none;
+				}
+				
+				> p {
+					font-size: 14px;
+				}
+				
+				> .button-container {
+					margin-top: 8px;
+					
+					> button {
+						min-width: 64px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#app-widget-prompt {
+	> input {
+		width: 100%;
+		margin-top: 8px;
+		padding: 4px 8px;
+		border: 1px solid #d4d4d4;
+	}
+}

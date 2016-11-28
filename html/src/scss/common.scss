@@ -1,0 +1,154 @@
+.fixed-screen {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.app-view-wrapper {
+	@extend .fixed-screen;
+
+	> div {
+		@extend .fixed-screen;
+	}
+}
+
+.app-view {
+	@extend .fixed-screen;
+}
+
+.app-progress {
+	@extend .fixed-screen;
+	height: 4px;
+	z-index: 100;
+
+	.app-progress-gauge {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+		width: 100%;
+		transition-duration: .3s;
+		-webkit-transition-duration: .3s; 
+	} 
+}
+
+.button-container {
+	clear: both;
+	display: block;
+	text-align: center;
+	
+	> * {
+		display: inline-block;
+		margin: 0 8px; 
+	}
+	
+	&.ui-left {
+		text-align: left; 
+	}
+	&.ui-right {
+		text-align: right;
+	}
+}
+
+.ui-textbox {
+	display: inline-block;
+	padding: 12px;
+	background-color: #fff;
+	color: #1c1c1c;
+
+	&.ui-round {
+		border-radius: 20px;
+	}
+	&.ui-borderless {
+		border: none;
+	}
+	&.ui-disabled {
+		color: $theme-disabled-color;
+		cursor: not-allowed;
+	}
+}
+
+.ui-button {
+	display: inline-block;
+	padding: 12px;
+	background-color: #fff;
+	color: #1c1c1c;
+
+	&.ui-round {
+		border-radius: 20px;
+	}
+	&.ui-borderless {
+		border: none;
+	}
+	
+	&.ui-theme-red {
+		color: $theme-red-color;
+		background-color: $theme-red-bgColor;
+		
+		&:hover {
+			background-color: lighten($theme-red-bgColor, 5%);
+		}
+		&:active {
+			background-color: lighten($theme-red-bgColor, 10%);
+		}
+	}
+	
+	&.ui-theme-green {
+		color: $theme-green-color;
+		background-color: $theme-green-bgColor;
+		
+		&:hover {
+			background-color: lighten($theme-green-bgColor, 5%);
+		}
+		&:active {
+			background-color: lighten($theme-green-bgColor, 10%);
+		}
+	}
+	
+	&.ui-theme-blue {
+		color: $theme-blue-color;
+		background-color: $theme-blue-bgColor;; 
+		
+		&:hover {
+			background-color: lighten($theme-blue-bgColor, 5%);
+		}
+		&:active {
+			background-color: lighten($theme-blue-bgColor, 10%);
+		}
+	}
+}
+
+.ui-checkbox {
+	display: block;
+
+	> * {
+		display: inline-block;
+		vertical-align: center;
+	}
+	> input[type=checkbox] {
+		margin-right: 8px;
+	}
+	> label {
+		font-size: 12px;
+	}
+}
+
+.ui-control-group {
+	margin: 12px 0;
+
+	> * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	> .ui-label {
+		width: 30%;
+		margin-right: 5%;
+	}
+	> .ui-textbox {
+		width: 60%;
+	}
+}

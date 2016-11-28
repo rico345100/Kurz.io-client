@@ -1,0 +1,22 @@
+{
+  "name": "kurz_io_client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "npm run build:osx && npm run build:win",
+    "build:osx": "electron-packager . Kurz.io --ignore='Kurz-io-win32-x64|node_modules/(.bin|electron-packager|electron-prebuilt)|html/(.sass-cache|node_modules|src|gulpfile.js|npm-debug.log)' --platform=darwin --arch=x64 --icon=icon-osx.icns",
+    "build:win": "electron-packager . Kurz-io --ignore='Kurz.io-darwin-x64|node_modules/(.bin|electron-packager|electron-prebuilt)|html/(.sass-cache|node_modules|src|gulpfile.js|npm-debug.log)' --platform=win32 --arch=x64 --icon=icon-win.ico",
+    "package": "npm run package:osx && npm run package:win",
+    "package:osx": "asar pack Kurz.io-darwin-x64/Kurz.io.app/Contents/Resources/app Kurz.io-darwin-x64/Kurz.io.app/Contents/Resources/app.asar && rm -rf Kurz.io-darwin-x64/Kurz.io.app/Contents/Resources/app",
+    "package:win": "asar pack Kurz-io-win32-x64/resources/app Kurz-io-win32-x64/resources/app.asar && rm -rf Kurz-io-win32-x64/resources/app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-packager": "^7.0.3",
+    "electron-prebuilt": "^1.2.0",
+    "node-notifier": "^4.6.0"
+  }
+}
